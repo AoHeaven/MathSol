@@ -1,0 +1,1 @@
+C:\Users\ASUS-PC\AppData\Roaming\Python\Python310\Scripts\pyinstaller.exe --name MathSol
