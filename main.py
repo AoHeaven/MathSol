@@ -9,6 +9,7 @@ CONST_COLOR_ORANGE = "#ffa602"
 CONST_COLOR_GREEN = "#00c000"
 CONST_COLOR_BLUE = "#4da1e6"
 CONST_COLOR_GREY = "#e6e6e6"
+CONST_COLOR_RED = "#e7616e"
  
 class CreateWindow():
     def __init__(self, title, width, height):
@@ -82,13 +83,13 @@ class CreateWindow():
                     num_two = self.list_entry[1].get()
 
                     num_result = 1 / 2 * float(num_one) * float(num_two)
-                    self.list_lbl[6].config(text="Відповідь: {} сантиметрів (квадратних).".format(num_result))
+                    self.list_lbl[6].config(text="Відповідь: {} сантиметрів (квадратних).".format(num_result), background=CONST_COLOR_BLUE)
             elif self.list_cbox[0].current() == 0 and self.list_cbox[1].current() == 1:
                 if self.list_entry[0].get() == "" or self.list_entry[1].get() == "" or self.list_entry[2].get() == "":
                     self.list_lbl[6].config(text="Заповніть пусті поля", background=CONST_COLOR_ORANGE)
                 elif self.list_entry[0].get() == "0" or self.list_entry[1].get() == "0" or self.list_entry[2].get() == "0":
                     self.list_lbl[6].config(text="Одне з чисел не може дорівнювати 0", background=CONST_COLOR_ORANGE)
-                else:
+                try:
                     # Звичайний трикутник - за трьома сторонами
                     num_one = self.list_entry[0].get()
                     num_two = self.list_entry[1].get()
@@ -97,10 +98,17 @@ class CreateWindow():
                     num_one = float(num_one)
                     num_two = float(num_two)
                     num_three = float(num_three)
-                    num_four = (num_one + num_two + num_three) / 2
 
-                    num_result = math.sqrt(num_four*(num_four-num_one)/(num_four-num_two)*(num_four-num_three))
-                    self.list_lbl[6].config(text="Відповідь: {} сантиметрів (квадратних).".format(round(num_result, 1)))
+                    num_four = 1/2*(num_one+num_two+num_three)
+                    num_five = num_four-num_one
+                    num_six = num_four-num_two
+                    num_seven = num_four-num_three
+
+                    num_result = math.sqrt(num_four*num_five*num_six*num_seven)
+                except ValueError:
+                    self.list_lbl[6].config(text="Трикутника з такими параметрами не існує.", background=CONST_COLOR_RED)
+                else:
+                    self.list_lbl[6].config(text="Відповідь: {} сантиметрів (квадратних).".format(round(num_result, 4)), background=CONST_COLOR_BLUE) 
             elif self.list_cbox[0].current() == 0 and self.list_cbox[1].current() == 2:
                 if self.list_entry[0].get() == "" or self.list_entry[1].get() == "" or self.list_entry[2].get() == "":
                     self.list_lbl[6].config(text="Заповніть пусті поля", background=CONST_COLOR_ORANGE)
@@ -117,10 +125,10 @@ class CreateWindow():
                     num_three = float(num_three)
 
                     num_three = math.sin(math.radians(num_three))
-                    num_three = round(num_three, 2)
+                    num_three = round(num_three, 8)
 
                     num_result = 1/2*num_one*num_two*num_three
-                    self.list_lbl[6].config(text="Відповідь: {} сантиметрів (квадратних).".format(round(num_result, 2)))
+                    self.list_lbl[6].config(text="Відповідь: {} сантиметрів (квадратних).".format(round(num_result, 2)), background=CONST_COLOR_BLUE)
             elif self.list_cbox[0].current() == 0 and self.list_cbox[1].current() == 3:
                 if self.list_entry[0].get() == "" or self.list_entry[1].get() == "" or self.list_entry[2].get() == "" or self.list_entry[3].get() == "":
                     self.list_lbl[6].config(text="Заповніть пусті поля", background=CONST_COLOR_ORANGE)
@@ -139,7 +147,7 @@ class CreateWindow():
                     num_four = float(num_four)
 
                     num_result = (num_one*num_two*num_three)/(4*num_four)
-                    self.list_lbl[6].config(text="Відповідь: {} сантиметрів (квадратних).".format(round(num_result, 2)))
+                    self.list_lbl[6].config(text="Відповідь: {} сантиметрів (квадратних).".format(round(num_result, 2)), background=CONST_COLOR_BLUE)
             elif self.list_cbox[0].current() == 0 and self.list_cbox[1].current() == 4:
                 if self.list_entry[0].get() == "" or self.list_entry[1].get() == "" or self.list_entry[2].get() == "" or self.list_entry[3].get() == "":
                     self.list_lbl[6].config(text="Заповніть пусті поля", background=CONST_COLOR_ORANGE)
@@ -158,7 +166,7 @@ class CreateWindow():
                     num_four = float(num_four)
 
                     num_result = 1/2*(num_one+num_two+num_three)*num_four
-                    self.list_lbl[6].config(text="Відповідь: {} сантиметрів (квадратних).".format(round(num_result, 2)))
+                    self.list_lbl[6].config(text="Відповідь: {} сантиметрів (квадратних).".format(round(num_result, 2)), background=CONST_COLOR_BLUE)
             elif self.list_cbox[0].current() == 1 and self.list_cbox[1].current() == 0:
                 if self.list_entry[0].get() == "" or self.list_entry[1].get() == "":
                     self.list_lbl[6].config(text="Заповніть пусті поля", background=CONST_COLOR_ORANGE)
@@ -173,7 +181,7 @@ class CreateWindow():
                     num_two = float(num_two)
 
                     num_result = 1/2*num_one*num_two
-                    self.list_lbl[6].config(text="Відповідь: {} сантиметрів (квадратних).".format(round(num_result, 2)))
+                    self.list_lbl[6].config(text="Відповідь: {} сантиметрів (квадратних).".format(round(num_result, 2)), background=CONST_COLOR_BLUE)
             elif self.list_cbox[0].current() == 2 and self.list_cbox[1].current() == 0:
                 if self.list_entry[0].get() == "" or self.list_entry[1].get() == "":
                     self.list_lbl[6].config(text="Заповніть пусті поля", background=CONST_COLOR_ORANGE)
@@ -188,7 +196,7 @@ class CreateWindow():
                     num_two = float(num_two)
 
                     num_result = 1/2*num_two*math.sqrt((num_one+1/2*num_two)*(num_one-1/2*num_two))
-                    self.list_lbl[6].config(text="Відповідь: {} сантиметрів (квадратних).".format(round(num_result, 2)))
+                    self.list_lbl[6].config(text="Відповідь: {} сантиметрів (квадратних).".format(round(num_result, 2)), background=CONST_COLOR_BLUE)
             elif self.list_cbox[0].current() == 2 and self.list_cbox[1].current() == 1:
                 if self.list_entry[0].get() == "" or self.list_entry[1].get() == "":
                     self.list_lbl[6].config(text="Заповніть пусті поля", background=CONST_COLOR_ORANGE)
@@ -206,7 +214,7 @@ class CreateWindow():
                     num_two = round(num_two, 3)
 
                     num_result = 1/2*num_one**2*num_two
-                    self.list_lbl[6].config(text="Відповідь: {} сантиметрів (квадратних).".format(round(num_result, 4)))
+                    self.list_lbl[6].config(text="Відповідь: {} сантиметрів (квадратних).".format(round(num_result, 4)), background=CONST_COLOR_BLUE)
             elif self.list_cbox[0].current() == 2 and self.list_cbox[1].current() == 2:
                 if self.list_entry[0].get() == "" or self.list_entry[1].get() == "" or self.list_entry[2].get() == "":
                     self.list_lbl[6].config(text="Заповніть пусті поля", background=CONST_COLOR_ORANGE)
@@ -226,7 +234,7 @@ class CreateWindow():
                     num_three = round(num_three, 3)
 
                     num_result = 1/2*num_one*num_two*num_three
-                    self.list_lbl[6].config(text="Відповідь: {} сантиметрів (квадратних).".format(round(num_result, 4)))
+                    self.list_lbl[6].config(text="Відповідь: {} сантиметрів (квадратних).".format(round(num_result, 4)), background=CONST_COLOR_BLUE)
             elif self.list_cbox[0].current() == 3 and self.list_cbox[1].current() == 0:
                 if self.list_entry[0].get() == "" or self.list_entry[1].get() == "":
                     self.list_lbl[6].config(text="Заповніть пусті поля", background=CONST_COLOR_ORANGE)
@@ -241,7 +249,7 @@ class CreateWindow():
                     num_two = float(num_two)
 
                     num_result = 1/2*num_one*num_two
-                    self.list_lbl[6].config(text="Відповідь: {} сантиметрів (квадратних).".format(round(num_result, 4)))
+                    self.list_lbl[6].config(text="Відповідь: {} сантиметрів (квадратних).".format(round(num_result, 4)), background=CONST_COLOR_BLUE)
             elif self.list_cbox[0].current() == 3 and self.list_cbox[1].current() == 1:
                 if self.list_entry[0].get() == "":
                     self.list_lbl[6].config(text="Заповніть пусті поля", background=CONST_COLOR_ORANGE)
@@ -254,9 +262,8 @@ class CreateWindow():
                     num_one = float(num_one)
 
                     num_result = (math.sqrt(3)/4)*num_one**2
-                    self.list_lbl[6].config(text="Відповідь: {} сантиметрів (квадратних).".format(round(num_result, 4)))
+                    self.list_lbl[6].config(text="Відповідь: {} сантиметрів (квадратних).".format(round(num_result, 4)), background=CONST_COLOR_BLUE)
 
-            self.list_lbl[6].config(background=CONST_COLOR_BLUE)
             self.window.after(2000, self.statusbar_config)
 
         elif self.window.title() == "Площа прямокутника - MathSol":
