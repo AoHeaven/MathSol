@@ -263,9 +263,6 @@ class CreateWindow():
 
                     num_result = (math.sqrt(3)/4)*num_one**2
                     self.list_lbl[6].config(text="Відповідь: {} сантиметрів (квадратних).".format(round(num_result, 4)), background=CONST_COLOR_BLUE)
-
-            self.window.after(2000, self.statusbar_config)
-
         elif self.window.title() == "Площа прямокутника - MathSol":
             if self.list_cbox[0].current() == 0:
                 if self.list_entry[0].get() == "" or self.list_entry[1].get() == "":
@@ -300,7 +297,6 @@ class CreateWindow():
                     self.list_lbl[3].config(text="Відповідь: {} сантиметрів".format(round(num_result, 3)))
 
             self.list_lbl[3].config(background=CONST_COLOR_BLUE)
-            self.window.after(2000, self.statusbar_config)
         elif self.window.title() == "Площа квадрата - MathSol":
             if self.list_cbox[0].current() == 0:
                 if self.list_entry[0].get() == "":
@@ -327,7 +323,6 @@ class CreateWindow():
                     num_result = 1/2*num_one**2
 
                     self.list_lbl[2].config(text="Відповідь: {} сантиметрів (квадратних).".format(round(num_result, 3)), background=CONST_COLOR_BLUE)
-            self.window.after(2000, self.statusbar_config)
         elif self.window.title() == "Площа паралелограма - MathSol":
             if self.list_cbox[0].current() == 0:
                 if self.list_entry[0].get() == "" or self.list_entry[1].get() == "":
@@ -342,6 +337,7 @@ class CreateWindow():
                     num_two = float(num_two)
 
                     num_result = num_one*num_two
+                    self.list_lbl[4].config(text="Відповідь: {} сантиметрів (квадратних).".format(round(num_result, 3)), background=CONST_COLOR_BLUE)
             if self.list_cbox[0].current() == 1:
                 if self.list_entry[0].get() == "" or self.list_entry[1].get() == "" or self.list_entry[2].get() == "":
                     self.list_lbl[4].config(text="Заповніть пусті поля", background=CONST_COLOR_ORANGE)
@@ -360,6 +356,7 @@ class CreateWindow():
                     num_three = round(num_three, 3)
 
                     num_result = num_one*num_two*num_three
+                    self.list_lbl[4].config(text="Відповідь: {} сантиметрів (квадратних).".format(round(num_result, 3)), background=CONST_COLOR_BLUE)
             elif self.list_cbox[0].current() == 2:
                 if self.list_entry[0].get() == "" or self.list_entry[1].get() == "" or self.list_entry[2].get() == "":
                     self.list_lbl[4].config(text="Заповніть пусті поля", background=CONST_COLOR_ORANGE)
@@ -380,7 +377,6 @@ class CreateWindow():
                     num_result = 1/2*num_one*num_two*num_three
 
                     self.list_lbl[4].config(text="Відповідь: {} сантиметрів (квадратних).".format(round(num_result, 3)), background=CONST_COLOR_BLUE)
-                self.window.after(2000, self.statusbar_config)
         elif self.window.title() == "Площа ромба - MathSol":
             if self.list_cbox[0].current() == 0:
                 if self.list_entry[0].get() == "" or self.list_entry[1].get() == "":
@@ -429,7 +425,6 @@ class CreateWindow():
                     self.list_lbl[3].config(text="Відповідь: {} сантиметрів (квадратних).".format(round(num_result, 3)))
 
             self.list_lbl[3].config(background=CONST_COLOR_BLUE)
-            self.window.after(2000, self.statusbar_config)
         elif self.window.title() == "Площа трапеції - MathSol":
             if self.list_cbox[0].current() == 0:
                 if self.list_entry[0].get() == "" or self.list_entry[1].get() == "" or self.list_entry[2].get() == "":
@@ -449,7 +444,6 @@ class CreateWindow():
                     self.list_lbl[4].config(text="Відповідь: {} сантиметрів (квадратних).".format(round(num_result, 3)))
 
             self.list_lbl[4].config(background=CONST_COLOR_BLUE)
-            self.window.after(2000, self.statusbar_config)
         elif self.window.title() == "Площа круга - MathSol":
             if self.list_cbox[0].current() == 0:
                 if self.list_entry[0].get() == "":
@@ -477,7 +471,6 @@ class CreateWindow():
                     self.list_lbl[2].config(text="Відповідь: {} сантиметрів (квадратних).".format(round(num_result, 3)))
 
             self.list_lbl[2].config(background=CONST_COLOR_BLUE)
-            self.window.after(2000, self.statusbar_config)
         elif self.window.title() == "Площа еліпса - MathSol":
             if self.list_entry[0].get() == "" or self.list_entry[1].get() == "":
                 self.list_lbl[2].config(text="Заповніть пусті поля", background=CONST_COLOR_ORANGE)
@@ -519,7 +512,6 @@ class CreateWindow():
                 num_result = num_one*num_two
 
                 self.list_lbl[2].config(text="Відповідь: {} сантиметрів (кубічних).".format(round(num_result, 3)), background=CONST_COLOR_BLUE)
-                self.window.after(2000, self.statusbar_config)
         elif self.window.title() == "Об'єм паралелепіпеда - MathSol":
             if self.list_cbox[0].current() == 0:
                 if self.list_entry[0].get() == "" or self.list_entry[1].get() == "":
@@ -551,8 +543,6 @@ class CreateWindow():
 
                     num_result = num_one*num_two*num_three
                     self.list_lbl[4].config(text="Відповідь: {} сантиметрів (кубічних).".format(round(num_result, 3)), background=CONST_COLOR_BLUE)
-
-            self.window.after(2000, self.statusbar_config)
         elif self.window.title() == "Об'єм піраміди - MathSol":
             if self.list_entry[0].get() == "" or self.list_entry[1].get() == "":
                 self.list_lbl[2].config(text="Заповніть пусті поля", background=CONST_COLOR_ORANGE)
@@ -560,15 +550,17 @@ class CreateWindow():
                 self.list_lbl[2].config(text="Одне з чисел не може дорівнювати 0", background=CONST_COLOR_ORANGE)
             else:
                 num_one = self.list_entry[0].get()
-                num_two = self.list_entry[0].get()
+                num_two = self.list_entry[1].get()
 
                 num_one = float(num_one)
                 num_two = float(num_two)
 
-                num_result = 1/3*num_one*num_two
+                num_result = 1/3*(num_one*num_two)
 
                 self.list_lbl[2].config(text="Відповідь: {} сантиметрів (кубічних).".format(round(num_result, 3)), background=CONST_COLOR_BLUE)
-                self.window.after(2000, self.statusbar_config)
+                print(f"Number one: {num_one}")
+                print(f"Number two: {num_two}")
+                print(f"Result: {num_result}")
         elif self.window.title() == "Об'єм правильного тетраедра - MathSol":
             if self.list_entry[0].get() == "":
                 self.list_lbl[1].config(text="Заповніть пусті поля", background=CONST_COLOR_ORANGE)
@@ -582,7 +574,6 @@ class CreateWindow():
                 num_result = (num_one**3*math.sqrt(2))/12
 
                 self.list_lbl[1].config(text="Відповідь: {} сантиметрів (кубічних).".format(round(num_result, 3)), background=CONST_COLOR_BLUE)
-                self.window.after(2000, self.statusbar_config)
         elif self.window.title() == "Об'єм циліндра - MathSol":
             if self.list_cbox[0].current() == 0:
                 if self.list_entry[0].get() == "" or self.list_entry[1].get() == "":
@@ -613,7 +604,6 @@ class CreateWindow():
                     num_result = num_one*num_two
 
                     self.list_lbl[3].config(text="Відповідь: {} сантиметрів (кубічних).".format(round(num_result, 3)), background=CONST_COLOR_BLUE)
-                    self.window.after(2000, self.statusbar_config)
         elif self.window.title() == "Об'єм конуса - MathSol":
             if self.list_cbox[0].current() == 0:
                 if self.list_entry[0].get() == "" or self.list_entry[1].get() == "":
@@ -643,7 +633,6 @@ class CreateWindow():
 
                     num_result = 1/3*num_one*num_two
                     self.list_lbl[3].config(text="Відповідь: {} сантиметрів (кубічних).".format(round(num_result, 3)), background=CONST_COLOR_BLUE)
-                    self.window.after(2000, self.statusbar_config)
         elif self.window.title() == "Об'єм кулі - MathSol":
             if self.list_entry[0].get() == "":
                 self.list_lbl[1].config(text="Заповніть пусті поля", background=CONST_COLOR_ORANGE)
@@ -656,8 +645,6 @@ class CreateWindow():
 
                 num_result = 4/3*math.pi*num_one**3
                 self.list_lbl[1].config(text="Відповідь: {} сантиметрів".format(round(num_result, 3)), background=CONST_COLOR_BLUE)
-
-        self.window.after(2000, self.statusbar_config)
 
     
     # Методи створення віджетів
@@ -1131,8 +1118,8 @@ class CreateWindow():
             self.list_btn[1].place(x=25, y=385, width=120, height=25)
 
             self.list_lbl[3].config(text="Формула вибрана", background=CONST_COLOR_GREEN)
-
         self.window.after(2000, self.statusbar_config)
+
 
     def cbox_mode_change(self, event):
         if self.list_cbox[0].current() == 0:
@@ -1277,8 +1264,8 @@ class CreateWindow():
             self.list_entry[0].delete(0, tk.END)
 
             self.list_lbl[1].config(text="Поля очищені", background=CONST_COLOR_GREEN)
-
         self.window.after(2000, self.statusbar_config)
+
 
     def btn_return(self):
         self.window.destroy()
