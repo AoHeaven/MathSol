@@ -558,9 +558,6 @@ class CreateWindow():
                 num_result = 1/3*(num_one*num_two)
 
                 self.list_lbl[2].config(text="Відповідь: {} сантиметрів (кубічних).".format(round(num_result, 3)), background=CONST_COLOR_BLUE)
-                print(f"Number one: {num_one}")
-                print(f"Number two: {num_two}")
-                print(f"Result: {num_result}")
         elif self.window.title() == "Об'єм правильного тетраедра - MathSol":
             if self.list_entry[0].get() == "":
                 self.list_lbl[1].config(text="Заповніть пусті поля", background=CONST_COLOR_ORANGE)
@@ -751,7 +748,7 @@ class CreateWindow():
         if self.window.title() == "Площа трикутника - MathSol":
             # Status bar
             if self.list_cbox[1].current() >= 0:
-                self.list_lbl[6].config(background=CONST_COLOR_GREEN, text="Формула обрана")
+                self.list_lbl[6].config(background=CONST_COLOR_GREEN, text="Формула вибрана")
 
                 # Кнопка "Обчислити"
                 self.list_btn[0].place(x=25, y=335, width=450, height=25)
@@ -762,11 +759,11 @@ class CreateWindow():
             if self.list_cbox[0].current() == 0 and self.list_cbox[1].current() == 0:
                 # Звичайний трикутник - за стороною і висотою
                 # Label & Entry 1
-                self.list_lbl[2].config(text="Довжина сторони (у см)")
+                self.list_lbl[2].config(text="Довжина сторони (см)")
                 self.list_entry[0].place(x=278, y=135, width=202)
                 
                 # Label & Entry 2
-                self.list_lbl[3].config(text="Довжина висоти (у см)")
+                self.list_lbl[3].config(text="Висота (см)")
                 self.list_entry[1].place(x=278, y=185, width=202)
 
                 # Label & Entry 3
@@ -779,15 +776,15 @@ class CreateWindow():
             elif self.list_cbox[0].current() == 0 and self.list_cbox[1].current() == 1:
                 # Звичайний трикутник - за трьома сторонами
                 # Label & Entry 1
-                self.list_lbl[2].config(text="Довжина першої сторони (у см)")
+                self.list_lbl[2].config(text="Довжина 1-ї сторони (см)")
                 self.list_entry[0].place(x=278, y=135, width=202)
 
                 # Label & Entry 2
-                self.list_lbl[3].config(text="Довжина другої сторони (у см)")
+                self.list_lbl[3].config(text="Довжина 2-ї сторони (см)")
                 self.list_entry[1].place(x=278, y=185, width=202)
 
                 # Label & Entry 3
-                self.list_lbl[4].config(text="Довжина третьої сторони (у см)")
+                self.list_lbl[4].config(text="Довжина 3-ї сторони (см)")
                 self.list_entry[2].place(x=278, y=235, width=202)
 
                 # Label & Entry 4
@@ -796,11 +793,11 @@ class CreateWindow():
             elif self.list_cbox[0].current() == 0 and self.list_cbox[1].current() == 2:
                 # Звичайний трикутник - за двома сторонами і кутом між ними
                 # Label & Entry 1
-                self.list_lbl[2].config(text="Довжина першої сторони (у см)")
+                self.list_lbl[2].config(text="Довжина 1-ї сторони (см)")
                 self.list_entry[0].place(x=278, y=135, width=202)
 
                 # Label & Entry 2
-                self.list_lbl[3].config(text="Довжина другої сторони (у см)")
+                self.list_lbl[3].config(text="Довжина 2-ї сторони (см)")
                 self.list_entry[1].place(x=278, y=185, width=202)
                 
                 # Label & Entry 3
@@ -813,15 +810,15 @@ class CreateWindow():
             elif self.list_cbox[0].current() == 0 and self.list_cbox[1].current() == 3:
                 # Звичайний трикутник - за трьома сторонами і радіусом ОПИСАНОГО кола
                 # Label & Entry 1
-                self.list_lbl[2].config(text="Довжина першої сторони (у см)")
+                self.list_lbl[2].config(text="Довжина 1-ї сторони (см)")
                 self.list_entry[0].place(x=278, y=135, width=202)
 
                 # Label & Entry 2
-                self.list_lbl[3].config(text="Довжина другої сторони (у см)")
+                self.list_lbl[3].config(text="Довжина 2-ї сторони (см)")
                 self.list_entry[1].place(x=278, y=185, width=202)
 
                 # Label & Entry 3
-                self.list_lbl[4].config(text="Довжина третьої сторони (у см)")
+                self.list_lbl[4].config(text="Довжина 3-ї сторони (см)")
                 self.list_entry[2].place(x=278, y=235, width=202)
 
                 # Label & Entry 4
@@ -830,15 +827,15 @@ class CreateWindow():
             elif self.list_cbox[0].current() == 0 and self.list_cbox[1].current() == 4:
                 # Звичайний трикутник - за трьома сторонами і радіусом ВПИСАНОГО кола
                 # Label & Entry 1
-                self.list_lbl[2].config(text="Довжина першої сторони (у см)")
+                self.list_lbl[2].config(text="Довжина 1-ї сторони (см)")
                 self.list_entry[0].place(x=278, y=135, width=202)
 
                 # Label & Entry 2
-                self.list_lbl[3].config(text="Довжина другої сторони (у см)")
+                self.list_lbl[3].config(text="Довжина 2-ї сторони (см)")
                 self.list_entry[1].place(x=278, y=185, width=202)
 
                 # Label & Entry 3
-                self.list_lbl[4].config(text="Довжина третьої сторони (у см)")
+                self.list_lbl[4].config(text="Довжина 3-ї сторони (см)")
                 self.list_entry[2].place(x=278, y=235, width=202)
                 
                 # Label & Entry 4
@@ -847,11 +844,11 @@ class CreateWindow():
             elif self.list_cbox[0].current() == 1 and self.list_cbox[1].current() == 0:
                 # Прямокутний трикутник - формула площі прямокутного трикутника
                 # Label & Entry 1
-                self.list_lbl[2].config(text="Довжина першого катета (у см)")
+                self.list_lbl[2].config(text="Довжина 1-го катета (см)")
                 self.list_entry[0].place(x=278, y=135, width=202)
 
                 # Label & Entry 2
-                self.list_lbl[3].config(text="Довжина другого катета (у см)")
+                self.list_lbl[3].config(text="Довжина 2-го катета (см)")
                 self.list_entry[1].place(x=278, y=185, width=202)
 
                 # Label & Entry 3
@@ -864,11 +861,11 @@ class CreateWindow():
             elif self.list_cbox[0].current() == 2 and self.list_cbox[1].current() == 0:
                 # Рівнобедрений трикутник - за основою та бічною стороною
                 # Label & Entry 1
-                self.list_lbl[2].config(text="Довжина бічної сторони (у см)")
+                self.list_lbl[2].config(text="Довжина бічної сторони (см)")
                 self.list_entry[0].place(x=278, y=135, width=202)
 
                 # Label & Entry 2
-                self.list_lbl[3].config(text="Довжина основи (у см)")
+                self.list_lbl[3].config(text="Довжина основи (см)")
                 self.list_entry[1].place(x=278, y=185, width=202)
 
                 #Label & Entry 3
@@ -881,7 +878,7 @@ class CreateWindow():
             elif self.list_cbox[0].current() == 2 and self.list_cbox[1].current() == 1:
                 # Рівнобедрений трикутник - за двома бічними сторонами та кутом між ними
                 # Label & Entry 1
-                self.list_lbl[2].config(text="Довжина бічної сторони (у см)")
+                self.list_lbl[2].config(text="Довжина бічної сторони (см)")
                 self.list_entry[0].place(x=278, y=135, width=202)
 
                 # Label & Entry 2
@@ -898,11 +895,11 @@ class CreateWindow():
             elif self.list_cbox[0].current() == 2 and self.list_cbox[1].current() == 2:
                 # Рівнобедрений трикутник - за основою, бічною стороною та кутом при вершині
                 # Label & Entry 1
-                self.list_lbl[2].config(text="Довжина бічної сторони (у см)")
+                self.list_lbl[2].config(text="Довжина бічної сторони (см)")
                 self.list_entry[0].place(x=278, y=135, width=202)
 
                 # Label & Entry 2
-                self.list_lbl[3].config(text="Довжина основи (у см)")
+                self.list_lbl[3].config(text="Довжина основи (см)")
                 self.list_entry[1].place(x=278, y=185, width=202)
 
                 #Label & Entry 3
@@ -915,11 +912,11 @@ class CreateWindow():
             elif self.list_cbox[0].current() == 3 and self.list_cbox[1].current() == 0:
                 # Рівносторонній трикутник - через сторону та висоту
                 # Label & Entry 1
-                self.list_lbl[2].config(text="Довжина сторони (у см)")
+                self.list_lbl[2].config(text="Довжина сторони (см)")
                 self.list_entry[0].place(x=278, y=135, width=202)
 
                 # Label & Entry 2
-                self.list_lbl[3].config(text="Довжина висоти (у см)")
+                self.list_lbl[3].config(text="Висота (см)")
                 self.list_entry[1].place(x=278, y=185, width=202)
 
                 #Label & Entry 3
@@ -948,13 +945,13 @@ class CreateWindow():
                 self.list_entry[3].place_forget()
         elif self.window.title() == "Площа прямокутника - MathSol":
             if self.list_cbox[0].current() == 0:
-                self.list_lbl[1].config(text="Довжина сторони A (у сантиметрах)")
+                self.list_lbl[1].config(text="Довжина сторони A (см)")
                 self.list_entry[0].place(x=278, y=105, width=202)
 
-                self.list_lbl[2].config(text="Довжина сторони B (у сантиметрах)")
+                self.list_lbl[2].config(text="Довжина сторони B (см)")
                 self.list_entry[1].place(x=278, y=155, width=202)
             elif self.list_cbox[0].current() == 1:
-                self.list_lbl[1].config(text="Довжина діагоналі (у сантиметрах)")
+                self.list_lbl[1].config(text="Довжина діагоналі (см)")
                 self.list_entry[0].place(x=278, y=105, width=202)
 
                 self.list_lbl[2].config(text="Синус гострого кута (у градусах)")
@@ -965,10 +962,10 @@ class CreateWindow():
             self.list_lbl[3].config(text="Формула вибрана", background=CONST_COLOR_GREEN)
         if self.window.title() == "Площа квадрата - MathSol":
             if self.list_cbox[0].current() == 0:
-                self.list_lbl[1].config(text="Довжина сторони (у сантиметрах)")
+                self.list_lbl[1].config(text="Довжина сторони (см)")
                 self.list_entry[0].place(x=278, y=105, width=202)
             elif self.list_cbox[0].current() == 1:
-                self.list_lbl[1].config(text="Довжина діагоналі (у сантиметрах)")
+                self.list_lbl[1].config(text="Довжина діагоналі (см)")
                 self.list_entry[0].place(x=278, y=105, width=202)
 
             self.list_btn[0].place(x=25, y=305, width=450, height=25)
@@ -976,28 +973,28 @@ class CreateWindow():
             self.list_lbl[2].config(text="Формула вибрана", background=CONST_COLOR_GREEN)
         elif self.window.title() == "Площа паралелограма - MathSol":
             if self.list_cbox[0].current() == 0:
-                self.list_lbl[1].config(text="Довжина сторони (у сантиметрах)")
+                self.list_lbl[1].config(text="Довжина сторони (см)")
                 self.list_entry[0].place(x=278, y=105, width=202)
 
-                self.list_lbl[2].config(text="Довжина висоти (у сантиметрах)")
+                self.list_lbl[2].config(text="Висота (см)")
                 self.list_entry[1].place(x=278, y=155, width=202)
 
                 self.list_lbl[3].config(text="")
                 self.list_entry[2].place_forget()
             elif self.list_cbox[0].current() == 1:
-                self.list_lbl[1].config(text="Довжина 1 сторони (у сантиметрах)")
+                self.list_lbl[1].config(text="Довжина 1-ї сторони (см)")
                 self.list_entry[0].place(x=278, y=105, width=202)
 
-                self.list_lbl[2].config(text="Довжина 2 сторони (у сантиметрах)")
+                self.list_lbl[2].config(text="Довжина 2-ї сторони (см)")
                 self.list_entry[1].place(x=278, y=155, width=202)
 
                 self.list_lbl[3].config(text="Кут (у градусах)")
                 self.list_entry[2].place(x=278, y=205, width=202)
             elif self.list_cbox[0].current() == 2:
-                self.list_lbl[1].config(text="Довжина 1 діагоналі (у сантиметрах)")
+                self.list_lbl[1].config(text="Довжина 1-ї діагоналі (см)")
                 self.list_entry[0].place(x=278, y=105, width=202)
 
-                self.list_lbl[2].config(text="Довжина 2 діагоналі (у сантиметрах)")
+                self.list_lbl[2].config(text="Довжина 2-ї діагоналі (см)")
                 self.list_entry[1].place(x=278, y=155, width=202)
 
                 self.list_lbl[3].config(text="Кут (у градусах)")
@@ -1009,22 +1006,22 @@ class CreateWindow():
             self.list_lbl[4].config(text="Формула вибрана", background=CONST_COLOR_GREEN)
         elif self.window.title() == "Площа ромба - MathSol":
             if self.list_cbox[0].current() == 0:
-                self.list_lbl[1].config(text="Довжина сторони (у сантиметрах)")
+                self.list_lbl[1].config(text="Довжина сторони (см)")
                 self.list_entry[0].place(x=278, y=105, width=202)
 
-                self.list_lbl[2].config(text="Довжина висоти (у сантиметрах)")
+                self.list_lbl[2].config(text="Довжина висоти (см)")
                 self.list_entry[1].place(x=278, y=155, width=202)
             elif self.list_cbox[0].current() == 1:
-                self.list_lbl[1].config(text="Довжина сторони (у сантиметрах)")
+                self.list_lbl[1].config(text="Довжина сторони (см)")
                 self.list_entry[0].place(x=278, y=105, width=202)
 
                 self.list_lbl[2].config(text="Кут (у градусах)")
                 self.list_entry[1].place(x=278, y=155, width=202)
             elif self.list_cbox[0].current() == 2:
-                self.list_lbl[1].config(text="Довжина 1 діагоналі (у сантиметрах)")
+                self.list_lbl[1].config(text="Довжина 1-ї діагоналі (см)")
                 self.list_entry[0].place(x=278, y=105, width=202)
 
-                self.list_lbl[2].config(text="Довжина 2 діагоналі (у сантиметрах)")
+                self.list_lbl[2].config(text="Довжина 2-ї діагоналі (см)")
                 self.list_entry[1].place(x=278, y=155, width=202)
 
             self.list_btn[0].place(x=25, y=305, width=450, height=25)
@@ -1033,13 +1030,13 @@ class CreateWindow():
             self.list_lbl[3].config(text="Формула вибрана", background=CONST_COLOR_GREEN)
         elif self.window.title() == "Площа трапеції - MathSol":
             if self.list_cbox[0].current() == 0:
-                self.list_lbl[1].config(text="Довжина 1 основи (у сантиметрах)")
+                self.list_lbl[1].config(text="Довжина 1-ї основи (см)")
                 self.list_entry[0].place(x=278, y=105, width=202)
 
-                self.list_lbl[2].config(text="Довжина 2 основи (у сантиметрах)")
+                self.list_lbl[2].config(text="Довжина 2-ї основи (см)")
                 self.list_entry[1].place(x=278, y=155, width=202)
 
-                self.list_lbl[3].config(text="Довжина висоти (у сантиметрах)")
+                self.list_lbl[3].config(text="Висота (см)")
                 self.list_entry[2].place(x=278, y=205, width=202)
 
             self.list_btn[0].place(x=25, y=305, width=450, height=25)
@@ -1048,10 +1045,10 @@ class CreateWindow():
             self.list_lbl[4].config(text="Формула вибрана", background=CONST_COLOR_GREEN)
         elif self.window.title() == "Площа круга - MathSol":
             if self.list_cbox[0].current() == 0:
-                self.list_lbl[1].config(text="Радіус (у сантиметрах)")
+                self.list_lbl[1].config(text="Радіус (см)")
                 self.list_entry[0].place(x=278, y=105, width=202)
             elif self.list_cbox[0].current() == 1:
-                self.list_lbl[1].config(text="Довжина діагоналі (у сантиметрах)")
+                self.list_lbl[1].config(text="Довжина діагоналі (см)")
                 self.list_entry[0].place(x=278, y=105, width=202)
 
             self.list_btn[0].place(x=25, y=305, width=450, height=25)
@@ -1060,22 +1057,22 @@ class CreateWindow():
             self.list_lbl[2].config(text="Формула вибрана", background=CONST_COLOR_GREEN)
         elif self.window.title() == "Об'єм паралелепіпеда - MathSol":
             if self.list_cbox[0].current() == 0:
-                self.list_lbl[1].config(text="Площа основи")
+                self.list_lbl[1].config(text="Площа основи (см^2)")
                 self.list_entry[0].place(x=278, y=105, width=202)
 
-                self.list_lbl[2].config(text="Довжина висоти")
+                self.list_lbl[2].config(text="Висота (см)")
                 self.list_entry[1].place(x=278, y=155, width=202)
 
                 self.list_lbl[3].config(text="")
                 self.list_entry[2].place_forget()
             if self.list_cbox[0].current() == 1:
-                self.list_lbl[1].config(text="Довжина")
+                self.list_lbl[1].config(text="Довжина (см)")
                 self.list_entry[0].place(x=278, y=105, width=202)
 
-                self.list_lbl[2].config(text="Ширина")
+                self.list_lbl[2].config(text="Ширина (см)")
                 self.list_entry[1].place(x=278, y=155, width=202)
 
-                self.list_lbl[3].config(text="Висота")
+                self.list_lbl[3].config(text="Висота (см)")
                 self.list_entry[2].place(x=278, y=205, width=202)
 
             self.list_btn[0].place(x=25, y=305, width=450, height=25)
@@ -1084,16 +1081,16 @@ class CreateWindow():
             self.list_lbl[4].config(text="Формула вибрана", background=CONST_COLOR_GREEN)
         elif self.window.title() == "Об'єм циліндра - MathSol":
             if self.list_cbox[0].current() == 0:
-                self.list_lbl[1].config(text="Радіус")
+                self.list_lbl[1].config(text="Радіус (см)")
                 self.list_entry[0].place(x=278, y=105, width=202)
 
-                self.list_lbl[2].config(text="Довжина висоти")
+                self.list_lbl[2].config(text="Висота (см)")
                 self.list_entry[1].place(x=278, y=155, width=202)
             elif self.list_cbox[0].current() == 1:
-                self.list_lbl[1].config(text="Площа основи")
+                self.list_lbl[1].config(text="Площа основи (см^2)")
                 self.list_entry[0].place(x=278, y=105, width=202)
 
-                self.list_lbl[2].config(text="Довжина висоти")
+                self.list_lbl[2].config(text="Висота (см)")
                 self.list_entry[1].place(x=278, y=155, width=202)
 
             self.list_btn[0].place(x=25, y=305, width=450, height=25)
@@ -1102,16 +1099,16 @@ class CreateWindow():
             self.list_lbl[3].config(text="Формула вибрана", background=CONST_COLOR_GREEN)
         elif self.window.title() == "Об'єм конуса - MathSol":
             if self.list_cbox[0].current() == 0:
-                self.list_lbl[1].config(text="Радіус")
+                self.list_lbl[1].config(text="Радіус (см)")
                 self.list_entry[0].place(x=278, y=105, width=202)
 
-                self.list_lbl[2].config(text="Довжина висоти")
+                self.list_lbl[2].config(text="Висота (см)")
                 self.list_entry[1].place(x=278, y=155, width=202)
             elif self.list_cbox[0].current() == 1:
-                self.list_lbl[1].config(text="Площа основи")
+                self.list_lbl[1].config(text="Площа основи (см^2)")
                 self.list_entry[0].place(x=278, y=105, width=202)
 
-                self.list_lbl[2].config(text="Довжина висоти")
+                self.list_lbl[2].config(text="Висота (см)")
                 self.list_entry[1].place(x=278, y=155, width=202)
 
             self.list_btn[0].place(x=25, y=305, width=450, height=25)
@@ -1285,11 +1282,11 @@ class CreateWindow():
             window_triangle.win_config(CONST_COLOR_WHITE)
  
             window_triangle.lfrm_create("Список формул", 10, 5, 480, 95)
-            window_triangle.lfrm_create("Область обчислення", 10, 110, 480, 270)
+            window_triangle.lfrm_create("Область розрахунку", 10, 110, 480, 270)
             window_triangle.lfrm_create("Область керування", 10, 390, 480, 65)
             window_triangle.lfrm_config(CONST_COLOR_WHITE)
  
-            window_triangle.lbl_create("Тип трикутника", 15, 30, 128, tk.W, CONST_COLOR_WHITE)
+            window_triangle.lbl_create("Тип", 15, 30, 128, tk.W, CONST_COLOR_WHITE)
             window_triangle.lbl_create("Формула", 15, 60, 128, tk.W, CONST_COLOR_WHITE)
  
             window_triangle.cbox_create(triangle_type, 163, 30, 317, "readonly")
@@ -1339,7 +1336,7 @@ class CreateWindow():
             window_cube = CreateWindow("Об'єм куба - MathSol", 500, 240)
             window_cube.win_config(CONST_COLOR_WHITE)
 
-            window_cube.lfrm_create("Область обчислення", 10, 5, 480, 120)
+            window_cube.lfrm_create("Область розрахунку", 10, 5, 480, 120)
             window_cube.lfrm_create("Область керування", 10, 135, 480, 65)
             window_cube.lfrm_config(CONST_COLOR_WHITE)
 
@@ -1371,7 +1368,7 @@ class CreateWindow():
             window_rectangle.win_config(CONST_COLOR_WHITE)
  
             window_rectangle.lfrm_create("Список формул", 10, 5, 480, 65)
-            window_rectangle.lfrm_create("Область обчислення", 10, 80, 480, 270)
+            window_rectangle.lfrm_create("Область розрахунку", 10, 80, 480, 270)
             window_rectangle.lfrm_create("Область керування", 10, 360, 480, 65)
             window_rectangle.lfrm_config(CONST_COLOR_WHITE)
  
@@ -1412,7 +1409,7 @@ class CreateWindow():
             window_prism = CreateWindow("Об'єм призми - MathSol", 500, 285)
             window_prism.win_config(CONST_COLOR_WHITE)
 
-            window_prism.lfrm_create("Область обчислення", 10, 5, 480, 170)
+            window_prism.lfrm_create("Область розрахунку", 10, 5, 480, 170)
             window_prism.lfrm_create("Область керування", 10, 185, 480, 65)
             window_prism.lfrm_config(CONST_COLOR_WHITE)
 
@@ -1447,7 +1444,7 @@ class CreateWindow():
             window_square.win_config(CONST_COLOR_WHITE)
  
             window_square.lfrm_create("Список формул", 10, 5, 480, 65)
-            window_square.lfrm_create("Область обчислення", 10, 80, 480, 270)
+            window_square.lfrm_create("Область розрахунку", 10, 80, 480, 270)
             window_square.lfrm_create("Область керування", 10, 360, 480, 65)
             window_square.lfrm_config(CONST_COLOR_WHITE)
  
@@ -1485,11 +1482,11 @@ class CreateWindow():
             window_parallelepiped.win_config(CONST_COLOR_WHITE)
  
             window_parallelepiped.lfrm_create("Список формул", 10, 5, 480, 65)
-            window_parallelepiped.lfrm_create("Область обчислення", 10, 80, 480, 270)
+            window_parallelepiped.lfrm_create("Область розрахунку", 10, 80, 480, 270)
             window_parallelepiped.lfrm_create("Область керування", 10, 360, 480, 65)
             window_parallelepiped.lfrm_config(CONST_COLOR_WHITE)
  
-            window_parallelepiped.lbl_create("Формула", 15, 30, 128, tk.W, CONST_COLOR_WHITE)
+            window_parallelepiped.lbl_create("Тип", 15, 30, 128, tk.W, CONST_COLOR_WHITE)
  
             window_parallelepiped.cbox_create(parallelepiped_formula, 163, 30, 317, "readonly")
             window_parallelepiped.list_cbox[0].bind("<<ComboboxSelected>>", window_parallelepiped.cbox_event)
@@ -1537,7 +1534,7 @@ class CreateWindow():
             window_parallelogram.win_config(CONST_COLOR_WHITE)
  
             window_parallelogram.lfrm_create("Список формул", 10, 5, 480, 65)
-            window_parallelogram.lfrm_create("Область обчислення", 10, 80, 480, 270)
+            window_parallelogram.lfrm_create("Область розрахунку", 10, 80, 480, 270)
             window_parallelogram.lfrm_create("Область керування", 10, 360, 480, 65)
             window_parallelogram.lfrm_config(CONST_COLOR_WHITE)
  
@@ -1583,7 +1580,7 @@ class CreateWindow():
             window_pyramid = CreateWindow("Об'єм піраміди - MathSol", 500, 285)
             window_pyramid.win_config(CONST_COLOR_WHITE)
 
-            window_pyramid.lfrm_create("Область обчислення", 10, 5, 480, 170)
+            window_pyramid.lfrm_create("Область розрахунку", 10, 5, 480, 170)
             window_pyramid.lfrm_create("Область керування", 10, 185, 480, 65)
             window_pyramid.lfrm_config(CONST_COLOR_WHITE)
 
@@ -1617,7 +1614,7 @@ class CreateWindow():
             window_rhombus.win_config(CONST_COLOR_WHITE)
  
             window_rhombus.lfrm_create("Список формул", 10, 5, 480, 65)
-            window_rhombus.lfrm_create("Область обчислення", 10, 80, 480, 270)
+            window_rhombus.lfrm_create("Область розрахунку", 10, 80, 480, 270)
             window_rhombus.lfrm_create("Область керування", 10, 360, 480, 65)
             window_rhombus.lfrm_config(CONST_COLOR_WHITE)
  
@@ -1658,7 +1655,7 @@ class CreateWindow():
             window_ctetrahedron = CreateWindow("Об'єм правильного тетраедра - MathSol", 500, 240)
             window_ctetrahedron.win_config(CONST_COLOR_WHITE)
 
-            window_ctetrahedron.lfrm_create("Область обчислення", 10, 5, 480, 120)
+            window_ctetrahedron.lfrm_create("Область розрахунку", 10, 5, 480, 120)
             window_ctetrahedron.lfrm_create("Область керування", 10, 135, 480, 65)
             window_ctetrahedron.lfrm_config(CONST_COLOR_WHITE)
 
@@ -1690,7 +1687,7 @@ class CreateWindow():
             window_trapezium.win_config(CONST_COLOR_WHITE)
  
             window_trapezium.lfrm_create("Список формул", 10, 5, 480, 65)
-            window_trapezium.lfrm_create("Область обчислення", 10, 80, 480, 270)
+            window_trapezium.lfrm_create("Область розрахунку", 10, 80, 480, 270)
             window_trapezium.lfrm_create("Область керування", 10, 360, 480, 65)
             window_trapezium.lfrm_config(CONST_COLOR_WHITE)
  
@@ -1739,7 +1736,7 @@ class CreateWindow():
             window_cylinder.win_config(CONST_COLOR_WHITE)
  
             window_cylinder.lfrm_create("Список формул", 10, 5, 480, 65)
-            window_cylinder.lfrm_create("Область обчислення", 10, 80, 480, 270)
+            window_cylinder.lfrm_create("Область розрахунку", 10, 80, 480, 270)
             window_cylinder.lfrm_create("Область керування", 10, 360, 480, 65)
             window_cylinder.lfrm_config(CONST_COLOR_WHITE)
  
@@ -1786,7 +1783,7 @@ class CreateWindow():
             window_circle.win_config(CONST_COLOR_WHITE)
  
             window_circle.lfrm_create("Список формул", 10, 5, 480, 65)
-            window_circle.lfrm_create("Область обчислення", 10, 80, 480, 270)
+            window_circle.lfrm_create("Область розрахунку", 10, 80, 480, 270)
             window_circle.lfrm_create("Область керування", 10, 360, 480, 65)
             window_circle.lfrm_config(CONST_COLOR_WHITE)
  
@@ -1824,7 +1821,7 @@ class CreateWindow():
             window_cone.win_config(CONST_COLOR_WHITE)
  
             window_cone.lfrm_create("Список формул", 10, 5, 480, 65)
-            window_cone.lfrm_create("Область обчислення", 10, 80, 480, 270)
+            window_cone.lfrm_create("Область розрахунку", 10, 80, 480, 270)
             window_cone.lfrm_create("Область керування", 10, 360, 480, 65)
             window_cone.lfrm_config(CONST_COLOR_WHITE)
  
@@ -1868,7 +1865,7 @@ class CreateWindow():
             window_ellipse = CreateWindow("Площа еліпса - MathSol", 500, 285)
             window_ellipse.win_config(CONST_COLOR_WHITE)
 
-            window_ellipse.lfrm_create("Область обчислення", 10, 5, 480, 170)
+            window_ellipse.lfrm_create("Область розрахунку", 10, 5, 480, 170)
             window_ellipse.lfrm_create("Область керування", 10, 185, 480, 65)
             window_ellipse.lfrm_config(CONST_COLOR_WHITE)
  
@@ -1897,7 +1894,7 @@ class CreateWindow():
             window_ball = CreateWindow("Об'єм кулі - MathSol", 500, 240)
             window_ball.win_config(CONST_COLOR_WHITE)
 
-            window_ball.lfrm_create("Область обчислення", 10, 5, 480, 120)
+            window_ball.lfrm_create("Область розрахунку", 10, 5, 480, 120)
             window_ball.lfrm_create("Область керування", 10, 135, 480, 65)
             window_ball.lfrm_config(CONST_COLOR_WHITE)
 
